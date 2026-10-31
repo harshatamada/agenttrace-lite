@@ -1,0 +1,36 @@
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agenttrace-lite"
+version = "0.1.0"
+description = "Lightweight, local-first observability SDK for AI agents"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+
+authors = [
+    { name = "Harsha Vardhan Tamada" }
+]
+
+keywords = [
+    "ai",
+    "agents",
+    "observability",
+    "tracing",
+    "llm",
+    "debugging"
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+[project.scripts]
+agenttrace = "agenttrace_lite.cli:main"
